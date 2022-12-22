@@ -1,18 +1,36 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import logo from "./assets/vite.svg";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-
-// [] {}
+import HomeScreen from "./screens/HomeScreen";
+import { Store } from "./providers/Store";
+import { useEffect } from "react";
 
 const NavBarItem = ({ title, classprops }) => (
   <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
 );
 
+// [] {}
+
 const App = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
+
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const { data } = await Axios.get(`/api/products/categories`);
+
+        setCategories(data);
+      } catch (error) {}
+    };
+  }, [ctxDispatch]);
+
+  console.log(data);
+
   return (
     <BrowserRouter>
       <div className='min-h-screen'>
@@ -73,7 +91,11 @@ const App = () => {
               </div>
             </nav>
           </header>
-          <main></main>
+          <main>
+            <Routes>
+              <Route path='/' element={<HomeScreen />}></Route>
+            </Routes>
+          </main>
         </div>
       </div>
     </BrowserRouter>

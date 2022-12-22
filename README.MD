@@ -21,3 +21,11 @@
 5. Install React Icons
 
    1. npm install react-icons --save
+
+6. Install express.js
+
+   1. npm install express
+
+7. Create Server
+
+   1. create server.js
