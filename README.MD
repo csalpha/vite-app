@@ -29,3 +29,7 @@
 7. Create Server
 
    1. create server.js
+
+8. Install Mongoose
+
+   1. npm install mongoose
