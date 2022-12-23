@@ -41,3 +41,11 @@
 10. Create User Model
 
     1. models/userModel.js
+
+11. Create Product Routes
+
+    1. routes/productRoutes.js
+
+12. Install Express Async Handler
+
+    1. npm install --save express-async-handler
