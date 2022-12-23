@@ -33,3 +33,7 @@
 8. Install Mongoose
 
    1. npm install mongoose
+
+9. Create Product Model
+
+   1. models/productModel.js

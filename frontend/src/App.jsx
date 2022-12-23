@@ -29,8 +29,6 @@ const App = () => {
     };
   }, [ctxDispatch]);
 
-  console.log(data);
-
   return (
     <BrowserRouter>
       <div className='min-h-screen'>
