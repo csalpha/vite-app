@@ -37,3 +37,7 @@
 9. Create Product Model
 
    1. models/productModel.js
+
+10. Create User Model
+
+    1. models/userModel.js
